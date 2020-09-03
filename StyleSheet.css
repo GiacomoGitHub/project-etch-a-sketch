@@ -1,0 +1,30 @@
+
+body {
+    background-color: #e2dcea;
+    color: #383e30;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    text-align: center;
+}
+
+#heading {
+    font-size: x-large;
+}
+
+#subheading {
+    font-size: small;
+}
+
+#github {
+    float: left;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    font-size: smaller;
+}
+
+#history {
+    float: right;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    font-size: smaller;
+}
