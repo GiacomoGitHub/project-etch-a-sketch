@@ -1,7 +1,7 @@
 
 body {
-    background-color: #e2dcea;
-    color: #383e30;
+    background-color: #a20f02;
+    color: #f2e59f;
     font-family: 'Roboto', sans-serif;
     margin: auto;
     text-align: center;
@@ -9,22 +9,71 @@ body {
 
 #heading {
     font-size: x-large;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 1px 1px #53490c;
 }
 
 #subheading {
     font-size: small;
+    margin-bottom: 2%;
+    text-shadow: 1px 1px #53490c;
 }
 
 #github {
     float: left;
+    margin-top: 3%;
     margin-left: 10%;
     margin-bottom: 10%;
     font-size: smaller;
+    color: #f2e59f;
+    text-shadow: 1px 1px #53490c;
 }
 
 #history {
     float: right;
+    margin-top: 3%;
     margin-right: 10%;
     margin-bottom: 10%;
     font-size: smaller;
+    color: #f2e59f;
+    text-shadow: 1px 1px #53490c;
+}
+
+#container {
+    height: 400px;
+    width: 80%;
+    background: #eae2e0;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin: 0 auto; 
+}
+
+#pixel {
+    height: 10px;
+    width: 10px;
+    background: #eae2e0;
+    border: 1px solid black;
+    margin: 0 auto; 
+}
+
+#leftCircle {
+    background: #eae2e0;
+    border: 1px solid black;
+    box-shadow: 5px 10px #888888;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: left;
+    margin: 3%;
+}
+
+#rightCircle {
+    background: #eae2e0;
+    border: 1px solid black;
+    box-shadow: 5px 10px #888888;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: right;
+    margin: 3%;
 }

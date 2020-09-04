@@ -18,14 +18,19 @@ Pseudo-code
     + Title it "The Etch-a-Sketch history"
     + Give it the id "history"
     + Use the id in CSS to put it in the bottom right corner using float
++ Add buttons like in the toy
+    + Use div cirlces
 + Style the webpage
-    + background: neutral color
-    + text color: neutral
-    + font family: minimal
-    + general position of all elements: centered
-- Create a div in html that contains a 16x16 grid of square divs
-    - The inner divs should have the id "pixel"
-    - Use js to generate the 16x16 grid (do not copy and paste all the squares as html code!)
+    + background: like the toy
+    + text color: like the toy
+    + font family: like the toy
+    + general position of all elements: like the toy
++ Create a div in html with id "container"
+    + It contains a div with id "pixel"
+    + Make "pixel" as a square with the same color of "container"
+    + Put its background color to pearl white
+    - Using js, make so there us a 16x16 grid of square divs "pixel"
+        - Target "pixel" to show up 16x16 times in a grid
     - Use CSS grid as a method to showcase it 
     - Adjust the margins and padding of the squares
 - Create a way to track the hovering of the mouse over the divs
