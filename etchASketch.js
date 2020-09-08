@@ -1,12 +1,9 @@
 
-
-    for(i = 0; i < 256; i++){
-        let pixel = document.createElement("div");
-        pixel.style.width = "10px";
-        pixel.style.height = "10px";
-        pixel.style.background = "#eae2e0";
+// This loop creates 256 divs, styles them in squares, gives them the class .pixel, and append them as children to #container
+    for(i = 0; i < (16 * 16); i++){
+        let pixel = document.createElement('div');
         pixel.style.border = 'solid 1px #000'
         pixel.className = 'pixel';
-        document.getElementById("container").appendChild(pixel);
+        pixel.innerText = i + 1;
+        document.getElementById('container').appendChild(pixel);
     }
-

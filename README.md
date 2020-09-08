@@ -28,6 +28,7 @@ Pseudo-code
     + general position of all elements: like the toy
 + Create a div in html with id #container
     + Put its background color to pearl white
+    + You forgot to remove the inner div you initially put here. Once removed, you could finally have all cells inside div #container
 
 
 *** THIS IS TO PUT THE 16X16 DIVS INSIDE THE CONTAINER ***
@@ -45,7 +46,10 @@ Pseudo-code
             + runs document.getElementById("container").appendChild(div) each time to append this new div to #container;
     + Put them in a 16x16 grid using CSS
         + From this StackOverflow answer, you can use CSS to display .pixel as inline-block (https://stackoverflow.com/questions/33223511/how-can-i-make-a-40x40-grid-using-divs)
-        - How to make .pixel responsive to the size of the container?
+        - Using CSS Grid seems a better option (https://css-tricks.com/snippets/css/complete-guide-grid/):
+            - add display: grid as a CSS property of #container
+                - add properties in CSS to style the grid to have 16 rows and columns
+                - 1 fr for each element in the grid to keep it size responsive to the #container
     - Adjust the margins and padding of the squares
 
 
