@@ -13,9 +13,11 @@ Pseudo-code
     + Put an h2 element with the title "The legendary toy, right in your browser"
     + Style the subheading so that has a nice UI
 + Create a link to your Git Hub
+    + add target="_blank" to have it open in a new tab
     + Give it the id #github
     + Use the id in CSS to put it in the bottom left corner using float
 + Create a link to the Wikipedia page of the Etch-a-Sketch toy
+    + add target="_blank" to have it open in a new tab
     + Title it "The Etch-a-Sketch history"
     + Give it the id #history
     + Use the id in CSS to put it in the bottom right corner using float
@@ -46,19 +48,15 @@ Pseudo-code
             + runs document.getElementById("container").appendChild(div) each time to append this new div to #container;
     + Put them in a 16x16 grid using CSS
         + From this StackOverflow answer, you can use CSS to display .pixel as inline-block (https://stackoverflow.com/questions/33223511/how-can-i-make-a-40x40-grid-using-divs)
-        - Using CSS Grid seems a better option (https://css-tricks.com/snippets/css/complete-guide-grid/):
-            - add display: grid as a CSS property of #container
-                - add properties in CSS to style the grid to have 16 rows and columns
-                - 1 fr for each element in the grid to keep it size responsive to the #container
-    - Adjust the margins and padding of the squares
+        + Using CSS Grid seems a better option (https://css-tricks.com/snippets/css/complete-guide-grid/):
+            + add display: grid as a CSS property of #container
+                + add properties in CSS to style the grid to have 16 rows and columns using grif-template-columns and rows
+                + 1 fr for each element in the grid to keep it size responsive to the #container
 
 
 *** THIS IS TO CREATE THE DRAWINGS ***
-- Create a way to track the hovering of the mouse over the divs
-    - Event listeners seem the best option. Target the right div nodes
-        - Use the .pixel to target the right nodes
-    - With the hovering, there has to be a change in the color of the div
-        - Use js event listeners to change the background color of .pixel divs
+- Use .addEventListener "mouseover" on the variable pixel inside the loop
+    + in it, add a function that changes the background color of .pixel to black using target.style.backgroundColor = "black"
 
 
 *** THIS IS FOR ADDING ADDITIONAL FUNCTIONS TO THE TOY ***
@@ -69,6 +67,8 @@ Pseudo-code
     - Grab the input from the user and use it in a js function that determines the new grid
         - How can you grab it and use it in a function?
     - The space used for the new grid has to be the same as for the original 16x16 one
-- Add a button at the top of the screen to clear the current grid
+- Add a button in html at the top of the screen to clear the current grid
+    + give it the id #reset
+    + in CSS, give to #reset a 2% bottom margin and the same background color of the #container
 - Add a button to switch from bnw to random colors
 - Add a button to switch from random colors to bnw

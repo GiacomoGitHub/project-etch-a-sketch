@@ -22,6 +22,27 @@ body {
     text-shadow: 1px 1px #53490c;
 }
 
+/* This makes the reset button follow the UI style */
+#reset {
+    border: solid 1px black;
+    background-color: #eae2e0;;
+    margin-bottom: 2%;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* This creates the container/display of the toy, setting it to be a grid with 16 rows and columns */
+#container {
+    display: grid;
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(16, 1fr);
+    height: 400px;
+    width: 80%;
+    background-color: #eae2e0;
+    border: 1px solid black;
+    margin: 0 auto; 
+}
+
 /* This makes the link similar to the toy and in the left corner */
 #github {
     float: left;
@@ -42,23 +63,6 @@ body {
     font-size: smaller;
     color: #f2e59f;
     text-shadow: 1px 1px #53490c;
-}
-
-/* This creates the container/display of the toy, setting it to be a grid with 16 rows and columns */
-#container {
-    display: grid;
-    grid-template-rows: repeat(16, 1fr);
-    grid-template-columns: repeat(16, 1fr);
-    height: 400px;
-    width: 80%;
-    background: #eae2e0;
-    border: 1px solid black;
-    margin: 0 auto; 
-}
-
-/* This makes the div visible as a square */
-.pixel {
-    color: black;
 }
 
 /* This makes the div for the left circle similar to the toy */
