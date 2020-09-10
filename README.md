@@ -55,7 +55,7 @@ Pseudo-code
 
 
 *** THIS IS TO CREATE THE DRAWINGS ***
-- Use .addEventListener "mouseover" on the variable pixel inside the loop
++ Use .addEventListener "mouseover" on the variable pixel inside the loop
     + in it, add a function that changes the background color of .pixel to black using target.style.backgroundColor = "black"
 
 
@@ -67,8 +67,13 @@ Pseudo-code
     - Grab the input from the user and use it in a js function that determines the new grid
         - How can you grab it and use it in a function?
     - The space used for the new grid has to be the same as for the original 16x16 one
-- Add a button in html at the top of the screen to clear the current grid
++ Add a button in html at the top of the screen to clear the current grid
     + give it the id #reset
     + in CSS, give to #reset a 2% bottom margin and the same background color of the #container
+    + Add event listener to button #reset
+    - This event listener resets the screen
+        - One way to do so is to use the window.location.reload() method, but it is not a good UX (see source https://stackoverflow.com/questions/5294842/refresh-a-page-using-javascript-or-html))
+        - Is it possible to reset the .pixel divs to white?
+            - Maybe, you can use a loop or a for Each to set the color back to white
 - Add a button to switch from bnw to random colors
 - Add a button to switch from random colors to bnw
