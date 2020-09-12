@@ -1,40 +1,43 @@
 
 
-// This loop creates 256 divs, gives them the class .pixel, appends them as children to #container, adding also an event listener
-    // for(i = 0; i < (16 * 16); i++){
-    //     let pixel = document.createElement('div');
-    //     pixel.className = 'pixel';
-    //     document.getElementById('container').appendChild(pixel);
-    //     pixel.addEventListener('mouseover', function(event) {   
-    //         event.target.style.backgroundColor = "black";})
-    // };
-
-// This event listener reloads the webpage when the user presses the #reset button
-// document.getElementById('reset').addEventListener('click', ()=> window.location.reload());
-
-// This event listener runs the forEach method that changes the bckg color of .pixel divs when the user presses the #reset button
-//  document.getElementById('reset').addEventListener('click', ()=> document.getElementById('container').style.backgroundColor = 'orange');
-
-
-
-// let rows = 100;
-// let columns = 100;
-
-//     for(i = 0; i < (rows * columns); i++){
-//         let pixel = document.createElement('div');
-//         document.getElementById('container').appendChild(pixel);
-//         pixel.addEventListener('mouseover', function(event) {   
-//             event.target.style.backgroundColor = "black";});
-//         let targetedPixel = pixel;
-//         document.getElementById('reset').addEventListener('click', ()=> targetedPixel.style.backgroundColor = '#eae2e0');
-//     };
-
+// This variables set the value of rows and columns at the global level
 let rows = columns = 100;
 
+// This function creates the grid with a loop
+function createGrid () {
     for(i = 0; i < (rows * columns); i++){
+        // creating the divs
         let pixel = document.createElement('div');
+        // appending them to the parent,
         document.getElementById('container').appendChild(pixel);
+        // adding event listeners to make them black when overing over them
         pixel.addEventListener('mouseover', () => pixel.style.backgroundColor = "black");
+        // adding event listener to make them white when #reset button is pressed
         document.getElementById('reset').addEventListener('click', ()=> pixel.style.backgroundColor = '#eae2e0');
-    };
-    
+    }
+};
+// Calling it to have it create the grid when page loads
+createGrid();
+
+
+
+
+
+
+// This asks the user to enter a value when the restyling button is clicked, but removed because the execution is too slow (bad UX)
+// document.getElementById('gridRestyler').addEventListener('click', () => changeGrid());
+
+
+
+// This function can be used to change the grid, but is really slow to execute, commented out for UX sake
+// function changeGrid () {
+//     let newRows = newColumns = prompt("How many squares would you like on each side? (max 100)");
+//         document.getElementById('container').style.gridTemplateRows = 'repeat(' + newRows + ', 1fr)';
+//         document.getElementById('container').style.gridTemplateColumns = 'repeat(' + newRows + ', 1fr)';
+//         for(i = 0; i < (newRows * newColumns); i++){
+//             let pixel = document.createElement('div');
+//             document.getElementById('container').appendChild(pixel);
+//             pixel.addEventListener('mouseover', () => pixel.style.backgroundColor = "black");
+//             document.getElementById('reset').addEventListener('click', ()=> pixel.style.backgroundColor = '#eae2e0');
+//         }
+// }

@@ -23,7 +23,7 @@ body {
 }
 
 /* This makes the reset button follow the UI style */
-#reset {
+button {
     border: solid 1px black;
     background-color: #eae2e0;;
     margin-bottom: 2%;

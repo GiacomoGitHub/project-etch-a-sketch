@@ -46,6 +46,7 @@ Pseudo-code
             + creates the variable pixel that creates in the document a new div
             + styles it and gives it the class .pixel
             + runs document.getElementById("container").appendChild(div) each time to append this new div to #container;
+        + Added still a function with name "createGrid" to this loop and called it at the global level
     + Put them in a 16x16 grid using CSS
         + From this StackOverflow answer, you can use CSS to display .pixel as inline-block (https://stackoverflow.com/questions/33223511/how-can-i-make-a-40x40-grid-using-divs)
         + Using CSS Grid seems a better option (https://css-tricks.com/snippets/css/complete-guide-grid/):
@@ -60,20 +61,18 @@ Pseudo-code
 
 
 *** THIS IS FOR ADDING ADDITIONAL FUNCTIONS TO THE TOY ***
-- Ask for the user's input to set the number of squares per side (max 100)
-    - Use the html element input
-    - Alert the user if the input is not a number
-    - Alert the user if the input is > 100
-    - Grab the input from the user and use it in a js function that determines the new grid
-        - How can you grab it and use it in a function?
-    - The space used for the new grid has to be the same as for the original 16x16 one
 + Add a button in html at the top of the screen to clear the current grid
     + give it the id #reset
-    + in CSS, give to #reset a 2% bottom margin and the same background color of the #container
+    + in CSS, give to all buttons a 2% bottom margin and the same background color of the #container
     + Add event listener to button #reset
-    - This event listener resets the screen
-        - One way to do so is to use the window.location.reload() method, but it is not a good UX (see source https://stackoverflow.com/questions/5294842/refresh-a-page-using-javascript-or-html))
-        - Is it possible to reset the .pixel divs to white?
-            - Maybe, you can use a loop or a for Each to set the color back to white
+    + Add an event listener that resets the screen
+        + One way to do so is to use the window.location.reload() method, but it is not a good UX (see source https://stackoverflow.com/questions/5294842/refresh-a-page-using-javascript-or-html))
+        + Add the event listener into the loop itself to target each div .pixel and change its color back to #eae2e0
++ Add a button in html with id #gridRestyler
+    + Add to it an event listener that shows a prompt asking for how many rows the user wants
+    + Use the prompt() method
+    - Clear up the grid
+    + Set the variables rows and columns to be equal to the prompt input (so that you catch the value and pass it to them)
+    + Change the grid template rows and columns using .gridTemplateColumns property on #container
 - Add a button to switch from bnw to random colors
 - Add a button to switch from random colors to bnw
